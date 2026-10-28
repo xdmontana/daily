@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>One Question A Day</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main>
+
+        <header>
+            <h1>One Question A Day</h1>
+            <p class="subtitle">One idea. One day. Your interpretation.</p>
+        </header>
+
+        <!-- TODAY'S QUESTION -->
+
+        <section id="today-section">
+
+            <p id="today-date"></p>
+
+            <p id="category">Loading category...</p>
+
+            <h2 id="question">Loading question...</h2>
+
+            <p id="type"></p>
+
+            <button
+                id="explore-btn"
+                type="button"
+                aria-expanded="false"
+                aria-controls="explanation">
+                Explore the idea
+            </button>
+
+            <div id="explanation" hidden>
+
+                <h3>The Inspiration</h3>
+                <p id="source"></p>
+
+                <p id="context"></p>
+
+                <h3>A Second Thought</h3>
+                <p id="followUp"></p>
+
+            </div>
+
+        </section>
+
+        <!-- QUESTION ARCHIVE -->
+
+        <section id="archive-section">
+
+            <h2>Previous Questions</h2>
+
+            <p class="archive-subtitle">
+                Ideas worth revisiting.
+            </p>
+
+            <div id="archive-list"></div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>One Question A Day</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
