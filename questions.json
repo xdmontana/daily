@@ -8,7 +8,27 @@
     "source": "White Nights — Fyodor Dostoevsky",
     "context": "Dostoevsky explores how a brief human connection can transform a lonely person's inner world.",
     "followUp": "Does the duration of happiness determine its value?",
-    "publishDate": "2026-10-28"
+    "publishDate": "2026-10-28",
+    "origin": {
+      "type": "Literary inspiration",
+      "title": "White Nights",
+      "creator": "Fyodor Dostoevsky",
+      "description": "The question draws on the Dreamer's reflections on a brief encounter and the lasting significance of happiness."
+    },
+    "deepDive": {
+      "heading": "Can a fleeting experience give a life enduring meaning?",
+      "explanation": "The novella contrasts the duration of an experience with its emotional intensity. It invites us to consider whether a moment becomes less valuable because it ends.",
+      "relatedConcepts": ["Loneliness", "Memory", "Happiness"]
+    },
+    "resources": [
+      {
+        "type": "Book",
+        "title": "White Nights",
+        "author": "Fyodor Dostoevsky",
+        "url": "https://books.google.com/books?q=White+Nights+Fyodor+Dostoevsky",
+        "whyRead": "Read the novella, particularly the Dreamer's final reflections on happiness."
+      }
+    ]
   },
   {
     "id": 2,
@@ -18,7 +38,34 @@
     "source": "Original moral dilemma",
     "context": "Loyalty to a friend can conflict with responsibility to someone who has been harmed.",
     "followUp": "Would your answer change depending on the harm caused?",
-    "publishDate": "2026-10-29"
+    "publishDate": "2026-10-29",
+    "origin": {
+      "type": "Original dilemma",
+      "title": "Loyalty versus justice",
+      "creator": "The Underground",
+      "description": "An original moral dilemma about friendship, responsibility and the limits of loyalty."
+    },
+    "deepDive": {
+      "heading": "When does loyalty become complicity?",
+      "explanation": "Friendship creates special obligations of care and loyalty. But those obligations can conflict with justice and responsibility toward people outside the friendship. Is protecting a friend always an act of kindness, or can it sometimes enable wrongdoing?",
+      "relatedConcepts": ["Loyalty", "Justice", "Friendship", "Moral responsibility"]
+    },
+    "resources": [
+      {
+        "type": "Article",
+        "title": "Friendship",
+        "author": "Stanford Encyclopedia of Philosophy",
+        "url": "https://plato.stanford.edu/entries/friendship/",
+        "whyRead": "Explore what makes friendship valuable and whether friends have special moral obligations."
+      },
+      {
+        "type": "Article",
+        "title": "Loyalty",
+        "author": "Stanford Encyclopedia of Philosophy",
+        "url": "https://plato.stanford.edu/entries/loyalty/",
+        "whyRead": "Consider when loyalty is admirable and when it becomes morally questionable."
+      }
+    ]
   },
   {
     "id": 3,
@@ -28,7 +75,27 @@
     "source": "1984 — George Orwell",
     "context": "Orwell's novel explores propaganda, manipulated truth and the pressure to conform.",
     "followUp": "What evidence would make you doubt your own beliefs?",
-    "publishDate": "2026-10-30"
+    "publishDate": "2026-10-30",
+    "origin": {
+      "type": "Literary inspiration",
+      "title": "Nineteen Eighty-Four",
+      "creator": "George Orwell",
+      "description": "Orwell depicts a society in which political power attempts to control language, memory and even the meaning of truth."
+    },
+    "deepDive": {
+      "heading": "Can truth survive without agreement?",
+      "explanation": "When an entire society repeats the same claim, social pressure can make disagreement feel irrational. Orwell's novel asks whether reality depends on what people believe and how individuals can resist organised deception.",
+      "relatedConcepts": ["Propaganda", "Truth", "Conformity", "Epistemology"]
+    },
+    "resources": [
+      {
+        "type": "Book",
+        "title": "Nineteen Eighty-Four",
+        "author": "George Orwell",
+        "url": "https://books.google.com/books?q=Nineteen+Eighty-Four+George+Orwell",
+        "whyRead": "Explore Winston Smith's struggle to distinguish reality from officially manufactured truth."
+      }
+    ]
   },
   {
     "id": 4,
@@ -38,7 +105,27 @@
     "source": "The bystander effect",
     "context": "Research into the bystander effect examines how responsibility can become diffused among witnesses.",
     "followUp": "Would you act differently if you were the only witness?",
-    "publishDate": "2026-10-31"
+    "publishDate": "2026-10-31",
+    "origin": {
+      "type": "Psychological research",
+      "title": "The bystander effect",
+      "creator": "Social psychology",
+      "description": "Research associated with John Darley and Bibb Latané investigated how the presence of other people can influence helping behaviour."
+    },
+    "deepDive": {
+      "heading": "Why does a crowd sometimes make us less responsible?",
+      "explanation": "People may assume someone else will intervene, look to others for clues about whether a situation is serious, or fear misinterpreting what is happening. These effects depend on context and do not mean that crowds always prevent helping.",
+      "relatedConcepts": ["Diffusion of responsibility", "Social influence", "Helping behaviour"]
+    },
+    "resources": [
+      {
+        "type": "Research",
+        "title": "Research on the Bystander Effect",
+        "author": "Google Scholar",
+        "url": "https://scholar.google.com/scholar?q=Bystander+effect+Darley+Latane",
+        "whyRead": "Explore the original experiments and later research about when people intervene."
+      }
+    ]
   },
   {
     "id": 5,
@@ -48,7 +135,27 @@
     "source": "Original thought experiment",
     "context": "An action can benefit someone while being motivated by personal recognition.",
     "followUp": "Should morality be judged by intention or outcome?",
-    "publishDate": "2026-11-01"
+    "publishDate": "2026-11-01",
+    "origin": {
+      "type": "Original thought experiment",
+      "title": "Motives and moral worth",
+      "creator": "The Underground",
+      "description": "An original question inspired by longstanding debates about whether morality depends on motives, actions or consequences."
+    },
+    "deepDive": {
+      "heading": "Does intention matter more than impact?",
+      "explanation": "A person might help someone for selfish reasons and still improve their life. Consequentialist approaches emphasise outcomes, while other ethical approaches place greater importance on motives, duties or character.",
+      "relatedConcepts": ["Consequentialism", "Intention", "Virtue ethics", "Moral worth"]
+    },
+    "resources": [
+      {
+        "type": "Article",
+        "title": "Consequentialism",
+        "author": "Stanford Encyclopedia of Philosophy",
+        "url": "https://plato.stanford.edu/entries/consequentialism/",
+        "whyRead": "Discover ethical theories that evaluate actions through their consequences."
+      }
+    ]
   },
   {
     "id": 6,
@@ -58,7 +165,27 @@
     "source": "Historical interpretation",
     "context": "Historical context helps explain beliefs and actions, but explanation is not the same as justification.",
     "followUp": "Are there moral principles that should apply in every era?",
-    "publishDate": "2026-11-02"
+    "publishDate": "2026-11-02",
+    "origin": {
+      "type": "Historical debate",
+      "title": "Judging the past",
+      "creator": "Historiography",
+      "description": "Historians and philosophers debate how to understand past societies without automatically imposing present-day assumptions."
+    },
+    "deepDive": {
+      "heading": "Can we understand the past without excusing it?",
+      "explanation": "Historical context can explain why people acted as they did, but understanding an action does not necessarily justify it. The challenge is to avoid simplistic judgments while still taking moral harm seriously.",
+      "relatedConcepts": ["Presentism", "Historical context", "Moral relativism"]
+    },
+    "resources": [
+      {
+        "type": "Research",
+        "title": "Presentism in Historical Interpretation",
+        "author": "Google Scholar",
+        "url": "https://scholar.google.com/scholar?q=Presentism+in+history",
+        "whyRead": "Explore debates about applying modern values to historical events."
+      }
+    ]
   },
   {
     "id": 7,
@@ -68,7 +195,27 @@
     "source": "White Nights — Fyodor Dostoevsky",
     "context": "Unrequited affection raises questions about sacrifice, expectation and emotional generosity.",
     "followUp": "Can love ever be entirely free of self-interest?",
-    "publishDate": "2026-11-03"
+    "publishDate": "2026-11-03",
+    "origin": {
+      "type": "Literary inspiration",
+      "title": "White Nights",
+      "creator": "Fyodor Dostoevsky",
+      "description": "The relationship between the Dreamer and Nastenka explores longing, emotional generosity and the desire to be loved."
+    },
+    "deepDive": {
+      "heading": "Is love a gift or an exchange?",
+      "explanation": "Loving someone may involve genuinely wanting their happiness while also longing for affection in return. The question asks whether these desires can coexist or whether expectation makes love less selfless.",
+      "relatedConcepts": ["Unrequited love", "Altruism", "Desire", "Attachment"]
+    },
+    "resources": [
+      {
+        "type": "Book",
+        "title": "White Nights",
+        "author": "Fyodor Dostoevsky",
+        "url": "https://books.google.com/books?q=White+Nights+Fyodor+Dostoevsky",
+        "whyRead": "Pay attention to the Dreamer's emotional expectations and his response to Nastenka's choices."
+      }
+    ]
   },
   {
     "id": 8,
@@ -78,7 +225,27 @@
     "source": "Personal identity thought experiment",
     "context": "Questions about consciousness and personal identity become especially strange when we imagine perfect duplication.",
     "followUp": "Would memories alone be enough to make someone you?",
-    "publishDate": "2026-11-04"
+    "publishDate": "2026-11-04",
+    "origin": {
+      "type": "Philosophical thought experiment",
+      "title": "Personal identity and duplication",
+      "creator": "Philosophy of mind",
+      "description": "Duplication scenarios appear in philosophical debates about psychological continuity, consciousness and personal identity."
+    },
+    "deepDive": {
+      "heading": "Are you your memories, your body or something else?",
+      "explanation": "If two people share the same memories and personality, both may claim to be the original. This challenges the idea that psychological similarity alone can determine who someone is.",
+      "relatedConcepts": ["Personal identity", "Consciousness", "Continuity", "Duplication"]
+    },
+    "resources": [
+      {
+        "type": "Article",
+        "title": "Personal Identity",
+        "author": "Stanford Encyclopedia of Philosophy",
+        "url": "https://plato.stanford.edu/entries/identity-personal/",
+        "whyRead": "Explore philosophical accounts of what allows a person to remain the same over time."
+      }
+    ]
   },
   {
     "id": 9,
@@ -88,7 +255,27 @@
     "source": "Democratic theory",
     "context": "Compulsory voting creates tension between civic responsibility and individual freedom.",
     "followUp": "Is choosing not to vote itself a political choice?",
-    "publishDate": "2026-11-05"
+    "publishDate": "2026-11-05",
+    "origin": {
+      "type": "Political debate",
+      "title": "Compulsory voting",
+      "creator": "Democratic theory",
+      "description": "Some democracies require eligible citizens to participate in elections, raising questions about civic duties and personal freedom."
+    },
+    "deepDive": {
+      "heading": "Is voting a right, a responsibility or both?",
+      "explanation": "Supporters of compulsory voting argue that broad participation can strengthen representation. Critics argue that political freedom includes the freedom not to participate. The debate also raises questions about protest and disengagement.",
+      "relatedConcepts": ["Democracy", "Civic duty", "Political freedom", "Representation"]
+    },
+    "resources": [
+      {
+        "type": "Research",
+        "title": "Compulsory Voting and Democracy",
+        "author": "Google Scholar",
+        "url": "https://scholar.google.com/scholar?q=Compulsory+voting+democracy",
+        "whyRead": "Compare research on turnout, representation and compulsory voting systems."
+      }
+    ]
   },
   {
     "id": 10,
@@ -98,7 +285,27 @@
     "source": "Confirmation bias",
     "context": "Confirmation bias describes our tendency to favour information supporting existing beliefs.",
     "followUp": "When did you last change your mind about something important?",
-    "publishDate": "2026-11-06"
+    "publishDate": "2026-11-06",
+    "origin": {
+      "type": "Psychological concept",
+      "title": "Confirmation bias",
+      "creator": "Cognitive psychology",
+      "description": "Research on reasoning and judgment investigates how existing beliefs influence what evidence people seek and accept."
+    },
+    "deepDive": {
+      "heading": "Why is being wrong so difficult to recognise?",
+      "explanation": "People often notice supporting evidence more readily than contradictory evidence. This can make beliefs feel increasingly certain even when important information is missing.",
+      "relatedConcepts": ["Confirmation bias", "Critical thinking", "Belief", "Motivated reasoning"]
+    },
+    "resources": [
+      {
+        "type": "Research",
+        "title": "Research on Confirmation Bias",
+        "author": "Google Scholar",
+        "url": "https://scholar.google.com/scholar?q=Confirmation+bias+psychology",
+        "whyRead": "Explore how expectations influence information gathering and judgment."
+      }
+    ]
   },
   {
     "id": 11,
@@ -108,7 +315,27 @@
     "source": "Trolley problem",
     "context": "The trolley problem tests whether we judge actions by their consequences or by moral rules.",
     "followUp": "Would physically pushing someone change your answer?",
-    "publishDate": "2026-11-07"
+    "publishDate": "2026-11-07",
+    "origin": {
+      "type": "Philosophical thought experiment",
+      "title": "The trolley problem",
+      "creator": "Philippa Foot and later philosophers",
+      "description": "The trolley problem originated in moral philosophy and was developed through different scenarios involving harm, rescue and responsibility."
+    },
+    "deepDive": {
+      "heading": "Can doing harm be justified by preventing greater harm?",
+      "explanation": "The trolley problem compares the moral significance of consequences with duties not to harm others. Different versions reveal that people may judge redirecting a threat differently from directly using someone as a means to save others.",
+      "relatedConcepts": ["Consequentialism", "Deontology", "Moral dilemmas", "Intention"]
+    },
+    "resources": [
+      {
+        "type": "Article",
+        "title": "Ethics and the Trolley Problem",
+        "author": "Internet Encyclopedia of Philosophy",
+        "url": "https://iep.utm.edu/ethics-and-the-trolley-problem/",
+        "whyRead": "Examine the classic scenarios and why philosophers disagree about them."
+      }
+    ]
   },
   {
     "id": 12,
@@ -118,7 +345,27 @@
     "source": "1984 — George Orwell",
     "context": "The possibility of surveillance may change behaviour even when nobody actively intervenes.",
     "followUp": "Is privacy necessary for freedom?",
-    "publishDate": "2026-11-08"
+    "publishDate": "2026-11-08",
+    "origin": {
+      "type": "Literary inspiration",
+      "title": "Nineteen Eighty-Four",
+      "creator": "George Orwell",
+      "description": "Orwell's fictional surveillance state illustrates how the expectation of observation can shape individual behaviour."
+    },
+    "deepDive": {
+      "heading": "Does surveillance control us even when no one intervenes?",
+      "explanation": "Knowing that someone may be watching can encourage self-censorship. This raises the possibility that freedom requires more than permission to act; it may also require private space to think and experiment without fear.",
+      "relatedConcepts": ["Surveillance", "Privacy", "Self-censorship", "Freedom"]
+    },
+    "resources": [
+      {
+        "type": "Book",
+        "title": "Nineteen Eighty-Four",
+        "author": "George Orwell",
+        "url": "https://books.google.com/books?q=Nineteen+Eighty-Four+George+Orwell",
+        "whyRead": "Explore how telescreens, fear and uncertainty shape life in Orwell's imagined society."
+      }
+    ]
   },
   {
     "id": 13,
@@ -128,7 +375,27 @@
     "source": "Original discussion prompt",
     "context": "Work is motivated by more than money, including meaning, status, interest and social obligation.",
     "followUp": "Would essential but unpleasant jobs still get done?",
-    "publishDate": "2026-11-09"
+    "publishDate": "2026-11-09",
+    "origin": {
+      "type": "Original thought experiment",
+      "title": "Work beyond wages",
+      "creator": "The Underground",
+      "description": "An original scenario exploring how people might choose occupations if salary differences disappeared."
+    },
+    "deepDive": {
+      "heading": "What makes work worth doing?",
+      "explanation": "People work for income, but also for meaning, achievement, belonging and recognition. Equal pay could change which occupations attract workers and reveal the importance of both intrinsic and extrinsic motivation.",
+      "relatedConcepts": ["Intrinsic motivation", "Labour", "Meaning", "Economic incentives"]
+    },
+    "resources": [
+      {
+        "type": "Research",
+        "title": "Intrinsic Motivation and Work",
+        "author": "Google Scholar",
+        "url": "https://scholar.google.com/scholar?q=Intrinsic+motivation+work",
+        "whyRead": "Explore research on why people work beyond financial rewards."
+      }
+    ]
   },
   {
     "id": 14,
@@ -138,7 +405,27 @@
     "source": "Free will debate",
     "context": "The debate over free will asks how much control we have over decisions shaped by causes outside our control.",
     "followUp": "Can a choice be free even when it has causes?",
-    "publishDate": "2026-11-10"
+    "publishDate": "2026-11-10",
+    "origin": {
+      "type": "Philosophical debate",
+      "title": "Free will and determinism",
+      "creator": "Philosophical tradition",
+      "description": "The relationship between causal influences and personal freedom has been debated for centuries."
+    },
+    "deepDive": {
+      "heading": "Can a choice be yours if something caused it?",
+      "explanation": "Our preferences develop through upbringing, biology and experience. Some philosophers argue that freedom requires the ability to have acted differently; others argue that acting according to your own reasons can still count as freedom.",
+      "relatedConcepts": ["Free will", "Determinism", "Compatibilism", "Autonomy"]
+    },
+    "resources": [
+      {
+        "type": "Article",
+        "title": "Free Will",
+        "author": "Stanford Encyclopedia of Philosophy",
+        "url": "https://plato.stanford.edu/entries/freewill/",
+        "whyRead": "Explore major arguments about whether human choices can be free."
+      }
+    ]
   },
   {
     "id": 15,
@@ -148,7 +435,27 @@
     "source": "Original discussion prompt",
     "context": "Art can be judged through intention, craftsmanship, emotional impact and public interpretation.",
     "followUp": "Does an artist need an audience?",
-    "publishDate": "2026-11-11"
+    "publishDate": "2026-11-11",
+    "origin": {
+      "type": "Original discussion prompt",
+      "title": "Art without an audience",
+      "creator": "The Underground",
+      "description": "An original question about whether artistic value depends on recognition or understanding."
+    },
+    "deepDive": {
+      "heading": "Does art need to be understood to have value?",
+      "explanation": "An artwork may be technically ambitious, emotionally powerful or conceptually important without being immediately understood. Different theories of art emphasise the creator, the work itself or the experience of an audience.",
+      "relatedConcepts": ["Aesthetics", "Interpretation", "Artistic value", "Meaning"]
+    },
+    "resources": [
+      {
+        "type": "Article",
+        "title": "The Definition of Art",
+        "author": "Stanford Encyclopedia of Philosophy",
+        "url": "https://plato.stanford.edu/entries/art-definition/",
+        "whyRead": "Explore competing philosophical accounts of what makes something art."
+      }
+    ]
   },
   {
     "id": 16,
@@ -158,7 +465,27 @@
     "source": "Original thought experiment",
     "context": "Truthfulness and compassion can pull us in different directions.",
     "followUp": "Who should decide whether someone can handle the truth?",
-    "publishDate": "2026-11-12"
+    "publishDate": "2026-11-12",
+    "origin": {
+      "type": "Original dilemma",
+      "title": "The comforting lie",
+      "creator": "The Underground",
+      "description": "An original dilemma exploring whether kindness can justify withholding the truth."
+    },
+    "deepDive": {
+      "heading": "Can deception ever be compassionate?",
+      "explanation": "A lie might temporarily protect someone from distress while also denying them the ability to make informed decisions. The dilemma contrasts emotional comfort with honesty, respect and autonomy.",
+      "relatedConcepts": ["Honesty", "Compassion", "Autonomy", "Deception"]
+    },
+    "resources": [
+      {
+        "type": "Article",
+        "title": "The Definition of Lying and Deception",
+        "author": "Stanford Encyclopedia of Philosophy",
+        "url": "https://plato.stanford.edu/entries/lying-definition/",
+        "whyRead": "Explore what counts as lying and how deception differs from withholding information."
+      }
+    ]
   },
   {
     "id": 17,
@@ -168,7 +495,27 @@
     "source": "Artificial intelligence ethics",
     "context": "AI ethics raises difficult questions about whether behaviour, consciousness or the capacity to suffer grounds moral status.",
     "followUp": "What evidence would convince you an AI could suffer?",
-    "publishDate": "2026-11-13"
+    "publishDate": "2026-11-13",
+    "origin": {
+      "type": "Technology ethics",
+      "title": "AI and moral status",
+      "creator": "Philosophy of mind and AI ethics",
+      "description": "Debates about artificial intelligence raise questions about consciousness, suffering and the grounds of moral consideration."
+    },
+    "deepDive": {
+      "heading": "Does appearing conscious make something morally important?",
+      "explanation": "A system may describe suffering without that description establishing an actual subjective experience. The challenge is determining what evidence, if any, could justify moral concern for an artificial system.",
+      "relatedConcepts": ["AI ethics", "Consciousness", "Moral status", "Sentience"]
+    },
+    "resources": [
+      {
+        "type": "Article",
+        "title": "Artificial Intelligence",
+        "author": "Stanford Encyclopedia of Philosophy",
+        "url": "https://plato.stanford.edu/entries/artificial-intelligence/",
+        "whyRead": "Explore foundational philosophical questions about artificial intelligence and minds."
+      }
+    ]
   },
   {
     "id": 18,
@@ -178,7 +525,27 @@
     "source": "Collective memory",
     "context": "Public monuments express choices about what a society honours and remembers.",
     "followUp": "Is removing a monument the same as erasing history?",
-    "publishDate": "2026-11-14"
+    "publishDate": "2026-11-14",
+    "origin": {
+      "type": "Historical and cultural debate",
+      "title": "Monuments and collective memory",
+      "creator": "Public history",
+      "description": "Public monuments reveal how societies select, interpret and commemorate parts of their past."
+    },
+    "deepDive": {
+      "heading": "Who owns public memory?",
+      "explanation": "A monument does more than record history: it often communicates admiration or honour. Disputes about monuments raise questions about whose experiences are represented and how societies should confront complicated historical legacies.",
+      "relatedConcepts": ["Collective memory", "Public history", "Commemoration", "Representation"]
+    },
+    "resources": [
+      {
+        "type": "Research",
+        "title": "Monuments and Collective Memory",
+        "author": "Google Scholar",
+        "url": "https://scholar.google.com/scholar?q=Monuments+collective+memory",
+        "whyRead": "Explore scholarship on how monuments influence public understanding of history."
+      }
+    ]
   },
   {
     "id": 19,
@@ -188,7 +555,27 @@
     "source": "Original discussion prompt",
     "context": "Social belonging and respect for authority can influence what we believe.",
     "followUp": "When is disagreement a sign of courage, and when is it stubbornness?",
-    "publishDate": "2026-11-15"
+    "publishDate": "2026-11-15",
+    "origin": {
+      "type": "Original discussion prompt",
+      "title": "Conviction under disagreement",
+      "creator": "The Underground",
+      "description": "An original question related to social conformity and the difficulty of maintaining independent judgment."
+    },
+    "deepDive": {
+      "heading": "Is changing your mind weakness or wisdom?",
+      "explanation": "Agreement with respected people can feel reassuring, while disagreement can threaten belonging. Independent thinking requires both the courage to dissent and the humility to recognise when others have better evidence.",
+      "relatedConcepts": ["Conformity", "Intellectual humility", "Authority", "Independent thought"]
+    },
+    "resources": [
+      {
+        "type": "Research",
+        "title": "Social Conformity and the Asch Experiments",
+        "author": "Google Scholar",
+        "url": "https://scholar.google.com/scholar?q=Social+conformity+Asch+experiments",
+        "whyRead": "Explore classic research on how group pressure can influence individual judgments."
+      }
+    ]
   },
   {
     "id": 20,
@@ -198,7 +585,27 @@
     "source": "Hindsight bias",
     "context": "Hindsight bias can make outcomes feel more predictable than they really were.",
     "followUp": "How should we judge decisions made under uncertainty?",
-    "publishDate": "2026-11-16"
+    "publishDate": "2026-11-16",
+    "origin": {
+      "type": "Psychological concept",
+      "title": "Hindsight bias",
+      "creator": "Cognitive psychology",
+      "description": "Researchers study how knowing an outcome changes people's judgments about how predictable it was."
+    },
+    "deepDive": {
+      "heading": "Why does the past look inevitable?",
+      "explanation": "Once we know what happened, we may underestimate the uncertainty people faced beforehand. Hindsight bias can distort how we evaluate decisions, historical events and our own mistakes.",
+      "relatedConcepts": ["Hindsight bias", "Uncertainty", "Decision-making", "Memory"]
+    },
+    "resources": [
+      {
+        "type": "Research",
+        "title": "Research on Hindsight Bias",
+        "author": "Google Scholar",
+        "url": "https://scholar.google.com/scholar?q=Hindsight+bias",
+        "whyRead": "Read about the psychological mechanisms behind the feeling that we knew it all along."
+      }
+    ]
   },
   {
     "id": 21,
@@ -208,7 +615,27 @@
     "source": "Crime and Punishment — Fyodor Dostoevsky",
     "context": "Dostoevsky's novel explores guilt, rationalisation and attempts to place oneself above ordinary moral rules.",
     "followUp": "Does believing you are exceptional make you more dangerous?",
-    "publishDate": "2026-11-17"
+    "publishDate": "2026-11-17",
+    "origin": {
+      "type": "Literary inspiration",
+      "title": "Crime and Punishment",
+      "creator": "Fyodor Dostoevsky",
+      "description": "Raskolnikov's reasoning about extraordinary individuals provides a literary setting for questions about moral exceptions."
+    },
+    "deepDive": {
+      "heading": "Can an idea make wrongdoing seem righteous?",
+      "explanation": "Raskolnikov attempts to rationalise an immoral act through a theory about exceptional people and supposedly beneficial outcomes. The novel explores the distance between abstract arguments and the psychological reality of guilt.",
+      "relatedConcepts": ["Moral exceptionalism", "Guilt", "Rationalisation", "Justice"]
+    },
+    "resources": [
+      {
+        "type": "Book",
+        "title": "Crime and Punishment",
+        "author": "Fyodor Dostoevsky",
+        "url": "https://books.google.com/books?q=Crime+and+Punishment+Fyodor+Dostoevsky",
+        "whyRead": "Focus on Raskolnikov's justifications and how his experiences challenge his theory."
+      }
+    ]
   },
   {
     "id": 22,
@@ -218,7 +645,27 @@
     "source": "Fermi paradox",
     "context": "The Fermi paradox highlights the tension between the possibility of extraterrestrial life and the absence of confirmed contact.",
     "followUp": "Does silence tell us anything about humanity's future?",
-    "publishDate": "2026-11-18"
+    "publishDate": "2026-11-18",
+    "origin": {
+      "type": "Scientific question",
+      "title": "The Fermi paradox",
+      "creator": "Associated with Enrico Fermi",
+      "description": "The paradox concerns the apparent tension between the possibility of widespread extraterrestrial civilisations and the lack of confirmed evidence of them."
+    },
+    "deepDive": {
+      "heading": "If intelligent life is possible, where is everybody?",
+      "explanation": "The enormous scale of the universe makes extraterrestrial intelligence worth considering, but we do not know how common technological civilisations are or how detectable they would be. Proposed explanations range from rarity to enormous distances and communication limits.",
+      "relatedConcepts": ["Astrobiology", "SETI", "Drake equation", "Extraterrestrial intelligence"]
+    },
+    "resources": [
+      {
+        "type": "Research",
+        "title": "Research on the Fermi Paradox",
+        "author": "Google Scholar",
+        "url": "https://scholar.google.com/scholar?q=Fermi+paradox+extraterrestrial+intelligence",
+        "whyRead": "Explore scientific and philosophical explanations for the absence of confirmed contact."
+      }
+    ]
   },
   {
     "id": 23,
@@ -228,7 +675,27 @@
     "source": "Original moral dilemma",
     "context": "The scenario pits property rights and legal rules against the urgency of protecting a human life.",
     "followUp": "Can breaking the law sometimes be the morally right choice?",
-    "publishDate": "2026-11-19"
+    "publishDate": "2026-11-19",
+    "origin": {
+      "type": "Original moral dilemma",
+      "title": "The medicine dilemma",
+      "creator": "The Underground",
+      "description": "A dilemma about whether protecting a human life can justify violating property rights or legal rules."
+    },
+    "deepDive": {
+      "heading": "Is obeying the law always the right thing to do?",
+      "explanation": "Legal duties and moral duties are not always identical. The scenario asks whether the urgency of saving a life can outweigh obligations to respect property and law, and whether the absence of alternatives changes the judgment.",
+      "relatedConcepts": ["Law and morality", "Necessity", "Property rights", "Moral duty"]
+    },
+    "resources": [
+      {
+        "type": "Article",
+        "title": "Civil Disobedience",
+        "author": "Stanford Encyclopedia of Philosophy",
+        "url": "https://plato.stanford.edu/entries/civil-disobedience/",
+        "whyRead": "Explore a related but distinct debate about when deliberate lawbreaking may be morally justified."
+      }
+    ]
   },
   {
     "id": 24,
@@ -238,7 +705,27 @@
     "source": "Freedom of expression debate",
     "context": "Free expression debates balance open disagreement against the harms speech can cause.",
     "followUp": "Who should decide where the boundary lies?",
-    "publishDate": "2026-11-20"
+    "publishDate": "2026-11-20",
+    "origin": {
+      "type": "Political philosophy",
+      "title": "Freedom of expression",
+      "creator": "Political and legal philosophy",
+      "description": "Debates about free expression examine the relationship between individual liberty, public debate and protection from harm."
+    },
+    "deepDive": {
+      "heading": "Should freedom include the freedom to offend?",
+      "explanation": "Strong protections for speech may preserve disagreement and prevent authorities from suppressing unpopular views. However, speech can also cause harm. The challenge is identifying defensible limits without giving excessive power to those who enforce them.",
+      "relatedConcepts": ["Free speech", "Liberty", "Censorship", "Harm"]
+    },
+    "resources": [
+      {
+        "type": "Article",
+        "title": "Freedom of Speech",
+        "author": "Stanford Encyclopedia of Philosophy",
+        "url": "https://plato.stanford.edu/entries/freedom-speech/",
+        "whyRead": "Compare philosophical arguments for protecting speech and for placing limits on it."
+      }
+    ]
   },
   {
     "id": 25,
@@ -248,7 +735,27 @@
     "source": "White Nights — Fyodor Dostoevsky",
     "context": "Loneliness and idealisation can lead people to project their hopes onto another person.",
     "followUp": "How much of love is knowledge, and how much is imagination?",
-    "publishDate": "2026-11-21"
+    "publishDate": "2026-11-21",
+    "origin": {
+      "type": "Literary inspiration",
+      "title": "White Nights",
+      "creator": "Fyodor Dostoevsky",
+      "description": "The Dreamer's romantic imagination raises questions about the difference between knowing another person and imagining who they might be."
+    },
+    "deepDive": {
+      "heading": "Do we love people, or the stories we create about them?",
+      "explanation": "When we know someone only briefly, imagination can fill the gaps in our understanding. Idealisation may make affection feel powerful while also preventing us from seeing another person's independent desires and complexity.",
+      "relatedConcepts": ["Idealisation", "Projection", "Romantic love", "Loneliness"]
+    },
+    "resources": [
+      {
+        "type": "Book",
+        "title": "White Nights",
+        "author": "Fyodor Dostoevsky",
+        "url": "https://books.google.com/books?q=White+Nights+Fyodor+Dostoevsky",
+        "whyRead": "Consider how the Dreamer's fantasies shape his understanding of Nastenka."
+      }
+    ]
   },
   {
     "id": 26,
@@ -258,7 +765,27 @@
     "source": "Original discussion prompt",
     "context": "Traditions can create belonging and continuity, but their age alone does not settle their value.",
     "followUp": "When should a society abandon a tradition?",
-    "publishDate": "2026-11-22"
+    "publishDate": "2026-11-22",
+    "origin": {
+      "type": "Original discussion prompt",
+      "title": "The value of tradition",
+      "creator": "The Underground",
+      "description": "An original question about cultural continuity and the reasons people preserve inherited practices."
+    },
+    "deepDive": {
+      "heading": "Is being old enough to make something valuable?",
+      "explanation": "Traditions can preserve knowledge, identity and community. But longevity alone does not establish that a practice remains useful or justifiable. The question asks what positive reasons are needed to maintain inherited customs.",
+      "relatedConcepts": ["Tradition", "Culture", "Social change", "Collective identity"]
+    },
+    "resources": [
+      {
+        "type": "Research",
+        "title": "Tradition, Culture and Ethical Change",
+        "author": "Google Scholar",
+        "url": "https://scholar.google.com/scholar?q=Tradition+cultural+change+ethics",
+        "whyRead": "Explore how cultural traditions persist, change and acquire meaning."
+      }
+    ]
   },
   {
     "id": 27,
@@ -268,7 +795,27 @@
     "source": "Memory reconstruction",
     "context": "Human memory is reconstructive rather than a perfect recording of past events.",
     "followUp": "Are you the same person if your story about yourself changes?",
-    "publishDate": "2026-11-23"
+    "publishDate": "2026-11-23",
+    "origin": {
+      "type": "Psychological research",
+      "title": "Reconstructive memory",
+      "creator": "Cognitive psychology",
+      "description": "Research suggests remembering is an active process influenced by current knowledge, expectations and later experiences."
+    },
+    "deepDive": {
+      "heading": "If memory is imperfect, who are you?",
+      "explanation": "Autobiographical memories help us build a sense of personal continuity, yet they are not exact recordings. If our recollections change, our understanding of who we are may also evolve.",
+      "relatedConcepts": ["Autobiographical memory", "Identity", "Reconstruction", "Narrative self"]
+    },
+    "resources": [
+      {
+        "type": "Research",
+        "title": "Reconstructive Autobiographical Memory",
+        "author": "Google Scholar",
+        "url": "https://scholar.google.com/scholar?q=Reconstructive+autobiographical+memory",
+        "whyRead": "Explore research into how personal memories are reconstructed and revised."
+      }
+    ]
   },
   {
     "id": 28,
@@ -278,7 +825,27 @@
     "source": "Original thought experiment",
     "context": "This thought experiment asks whether personal growth can ever justify suffering.",
     "followUp": "Can something have meaning without being necessary?",
-    "publishDate": "2026-11-24"
+    "publishDate": "2026-11-24",
+    "origin": {
+      "type": "Original thought experiment",
+      "title": "Suffering and growth",
+      "creator": "The Underground",
+      "description": "An original hypothetical scenario exploring the relationship between painful experiences, learning and meaning."
+    },
+    "deepDive": {
+      "heading": "Does growth make suffering worthwhile?",
+      "explanation": "People sometimes discover meaning or develop resilience after painful experiences. But benefiting from suffering does not prove that suffering was necessary or justified. The thought experiment separates the value of growth from the value of the harm that preceded it.",
+      "relatedConcepts": ["Suffering", "Meaning", "Resilience", "Personal growth"]
+    },
+    "resources": [
+      {
+        "type": "Article",
+        "title": "The Meaning of Life",
+        "author": "Stanford Encyclopedia of Philosophy",
+        "url": "https://plato.stanford.edu/entries/life-meaning/",
+        "whyRead": "Explore philosophical questions about what gives human experiences and lives meaning."
+      }
+    ]
   },
   {
     "id": 29,
@@ -288,7 +855,27 @@
     "source": "Original discussion prompt",
     "context": "Tolerance can mean allowing differences to exist without necessarily respecting or embracing them.",
     "followUp": "What does genuine acceptance require?",
-    "publishDate": "2026-11-25"
+    "publishDate": "2026-11-25",
+    "origin": {
+      "type": "Original discussion prompt",
+      "title": "Tolerance and acceptance",
+      "creator": "The Underground",
+      "description": "An original question about the difference between permitting differences and genuinely respecting people."
+    },
+    "deepDive": {
+      "heading": "Is being allowed to belong the same as belonging?",
+      "explanation": "Tolerance can mean refraining from interference even while disapproving. Acceptance may involve recognition, respect or inclusion. The distinction raises questions about what people owe one another in a diverse society.",
+      "relatedConcepts": ["Tolerance", "Acceptance", "Respect", "Belonging"]
+    },
+    "resources": [
+      {
+        "type": "Article",
+        "title": "Toleration",
+        "author": "Stanford Encyclopedia of Philosophy",
+        "url": "https://plato.stanford.edu/entries/toleration/",
+        "whyRead": "Explore the meaning, value and limits of toleration in political philosophy."
+      }
+    ]
   },
   {
     "id": 30,
@@ -298,6 +885,26 @@
     "source": "Experience machine thought experiment",
     "context": "The experience-machine thought experiment asks whether pleasure is enough for a good life, or whether reality and achievement matter independently.",
     "followUp": "Why might an imperfect reality be preferable to perfect happiness?",
-    "publishDate": "2026-11-26"
+    "publishDate": "2026-11-26",
+    "origin": {
+      "type": "Philosophical thought experiment",
+      "title": "The experience machine",
+      "creator": "Robert Nozick",
+      "description": "Robert Nozick introduced the experience-machine thought experiment to challenge the idea that pleasurable experiences are all that matter in life."
+    },
+    "deepDive": {
+      "heading": "Is happiness enough if none of it is real?",
+      "explanation": "The experience machine offers the possibility of satisfying experiences without the corresponding real-world achievements or relationships. Our reluctance to enter such a machine may suggest that authenticity, reality and agency matter independently of pleasure.",
+      "relatedConcepts": ["Hedonism", "Authenticity", "Well-being", "Reality"]
+    },
+    "resources": [
+      {
+        "type": "Article",
+        "title": "Well-Being",
+        "author": "Stanford Encyclopedia of Philosophy",
+        "url": "https://plato.stanford.edu/entries/well-being/",
+        "whyRead": "Explore theories of well-being and why philosophers debate whether pleasure alone makes life good."
+      }
+    ]
   }
 ]
