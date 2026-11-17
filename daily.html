@@ -6,34 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Today's Question | The Underground</title>
-
   <meta name="theme-color" content="#f8f7f3">
+  <meta name="description" content="One question a day. Explore the ideas beneath the surface and follow your curiosity down The Rabbit Hole.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;1,400;1,500&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --cream: #f8f7f3;
+      --background: #f8f7f3;
       --paper: #fffefa;
       --sage: #64765a;
+      --sage-dark: #43543d;
+      --sage-light: #edf0e8;
       --dark: #2b302a;
       --muted: #747970;
-      --line: #e1e3da;
+      --border: #e1e3da;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       min-height: 100vh;
-      background: var(--cream);
+      background: var(--background);
       color: var(--dark);
-      font-family: "DM Sans", sans-serif;
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
     }
 
     a {
@@ -41,17 +49,37 @@
       text-decoration: none;
     }
 
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      cursor: not-allowed;
+      opacity: .4;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    :focus-visible {
+      outline: 3px solid #9aaa90;
+      outline-offset: 4px;
+    }
+
     .header {
-      padding: 26px max(24px, calc((100vw - 1000px) / 2));
-      border-bottom: 1px solid var(--line);
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 16px;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 26px max(24px, calc((100vw - 1050px) / 2));
+      border-bottom: 1px solid var(--border);
     }
 
     .brand {
-      font: 24px "Playfair Display", Georgia, serif;
+      font-family: var(--serif);
+      font-size: 24px;
       letter-spacing: -1px;
     }
 
@@ -60,27 +88,40 @@
     }
 
     .home-link {
-      font-size: 12px;
       color: var(--muted);
+      font-size: 12px;
+    }
+
+    .home-link:hover {
+      color: var(--sage);
     }
 
     main {
-      width: min(100% - 36px, 740px);
+      width: min(100% - 36px, 760px);
       margin: 70px auto 90px;
+    }
+
+    .page-intro {
       text-align: center;
+      margin-bottom: 45px;
     }
 
     .eyebrow {
+      color: var(--sage);
       font-size: 10px;
       font-weight: 700;
       letter-spacing: 2px;
-      color: var(--sage);
       text-transform: uppercase;
     }
 
+    h1, h2, h3 {
+      font-family: var(--serif);
+      font-weight: 400;
+    }
+
     h1 {
-      font: 400 clamp(38px, 7vw, 62px)/1.18
-        "Playfair Display", Georgia, serif;
+      font-size: clamp(38px, 7vw, 62px);
+      line-height: 1.2;
       letter-spacing: -1.5px;
       margin: 20px 0;
     }
@@ -88,15 +129,14 @@
     .intro {
       color: var(--muted);
       font-size: 14px;
-      line-height: 1.8;
-      margin-bottom: 42px;
+      line-height: 1.9;
     }
 
-    .question-card {
+    .question-card,
+    .deep-dive {
       background: var(--paper);
-      border: 1px solid var(--line);
-      padding: clamp(26px, 6vw, 55px);
-      text-align: left;
+      border: 1px solid var(--border);
+      padding: clamp(28px, 6vw, 55px);
       box-shadow: 0 15px 40px #00000008;
     }
 
@@ -105,70 +145,525 @@
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 12px;
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 23px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
+      color: var(--sage);
       font-size: 10px;
       font-weight: 700;
       letter-spacing: 1px;
-      color: var(--sage);
     }
 
     .category {
-      margin-top: 35px;
       color: var(--sage);
       font-size: 11px;
-      text-transform: uppercase;
+      font-weight: 600;
       letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-top: 38px;
     }
 
     .question {
-      font: 400 clamp(28px, 5vw, 43px)/1.4
-        "Playfair Display", Georgia, serif;
-      margin: 22px 0 35px;
+      font-family: var(--serif);
+      font-size: clamp(28px, 5vw, 43px);
+      line-height: 1.45;
+      letter-spacing: -.5px;
+      margin: 20px 0 30px;
     }
 
-    .context {
+    .reflection-prompt {
+      color: var(--muted);
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 16px;
+      line-height: 1.7;
+      border-top: 1px solid var(--border);
+      padding-top: 25px;
+    }
+
+    .reflection-area {
+      text-align: center;
+      padding: 40px 20px 10px;
+    }
+
+    .reflection-area h3 {
+      font-size: 27px;
+      margin: 10px 0;
+    }
+
+    .reflection-area p {
       color: var(--muted);
       font-size: 13px;
-      line-height: 1.8;
-      border-top: 1px solid var(--line);
-      padding-top: 24px;
+      line-height: 1.9;
+      max-width: 460px;
+      margin: 12px auto 25px;
     }
 
-    .follow-up {
-      margin-top: 25px;
-      padding: 20px;
-      background: #eef1e9;
+    .explore-button,
+    .primary-button {
+      background: var(--sage);
+      border: 1px solid var(--sage);
+      color: white;
+      padding: 16px 28px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .5px;
+      transition: background .2s ease, transform .2s ease;
+    }
+
+    .explore-button:hover,
+    .primary-button:hover {
+      background: var(--sage-dark);
+      transform: translateY(-2px);
+    }
+
+    .deep-dive {
+      margin-top: 38px;
+    }
+
+    .section-heading {
+      font-size: clamp(30px, 5vw, 42px);
+      letter-spacing: -1px;
+      margin: 12px 0 18px;
+    }
+
+    .section-description {
+      color: var(--muted);
       font-size: 13px;
-      line-height: 1.8;
+      line-height: 1.9;
+      margin-bottom: 35px;
     }
 
-    .follow-up strong {
+    .deep-section {
+      padding: 30px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .section-number {
+      color: var(--sage);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+    }
+
+    .deep-section h3 {
+      font-size: 25px;
+      margin: 12px 0 15px;
+    }
+
+    .deep-section p {
+      color: #575e55;
+      font-size: 13px;
+      line-height: 2;
+      white-space: pre-line;
+    }
+
+    .origin-type,
+    .concept {
+      display: inline-block;
+      background: var(--sage-light);
+      color: var(--sage-dark);
+      padding: 7px 12px;
+      font-size: 11px;
+    }
+
+    .origin-type {
+      margin-bottom: 16px;
+    }
+
+    .concepts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .resources {
+      display: grid;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .resource {
+      display: block;
+      background: #fafaf6;
+      border: 1px solid var(--border);
+      padding: 20px;
+      transition: border-color .2s;
+    }
+
+    a.resource:hover {
+      border-color: var(--sage);
+    }
+
+    .resource-type {
       display: block;
       color: var(--sage);
       font-size: 10px;
+      font-weight: 700;
       letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 9px;
+    }
+
+    .resource-title {
+      display: block;
+      font-family: var(--serif);
+      font-size: 21px;
       margin-bottom: 8px;
     }
 
-    .ritual {
-      margin: 45px 0 20px;
-      font: italic 26px "Playfair Display", Georgia, serif;
-      color: var(--sage);
+    .resource-author,
+    .resource-description {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+      margin-top: 6px;
     }
 
-    .closing {
+    .resource-arrow {
+      color: var(--sage);
+      font-size: 11px;
+      font-weight: 700;
+      margin-top: 15px;
+    }
+
+    .second-thought {
+      background: var(--sage-light);
+      padding: 25px;
+    }
+
+    .second-thought p {
+      color: var(--dark);
+      font-family: var(--serif);
+      font-size: 22px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* THE RABBIT HOLE */
+
+    .rabbit-entry {
+      margin-top: 50px;
+      padding: 45px 28px;
+      text-align: center;
+      border: 1px solid var(--border);
+      background:
+        radial-gradient(circle at 50% 0%, #e7ece2 0%, transparent 65%),
+        var(--paper);
+    }
+
+    .rabbit-symbol {
+      display: block;
+      font-family: var(--serif);
+      font-size: 45px;
+      color: var(--sage);
+      margin: 0 auto 16px;
+    }
+
+    .rabbit-entry h3 {
+      font-size: clamp(29px, 5vw, 38px);
+      margin: 13px 0;
+    }
+
+    .rabbit-entry > p:not(.eyebrow) {
+      max-width: 450px;
+      margin: 15px auto 26px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .rabbit-world {
+      margin-top: 24px;
+      border: 1px solid var(--border);
+      background: var(--paper);
+    }
+
+    .rabbit-world-header {
+      padding: 32px 35px 26px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .rabbit-world-header h2 {
+      font-size: clamp(32px, 5vw, 44px);
+      margin: 10px 0;
+    }
+
+    .rabbit-world-header p:last-child {
       color: var(--muted);
       font-size: 13px;
       line-height: 1.8;
     }
 
-    .footer {
-      padding: 30px;
-      border-top: 1px solid var(--line);
+    .rabbit-tabs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .rabbit-tab {
+      border: 0;
+      border-bottom: 2px solid transparent;
+      background: #fafaf7;
+      color: var(--muted);
+      padding: 20px 12px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .rabbit-tab + .rabbit-tab {
+      border-left: 1px solid var(--border);
+    }
+
+    .rabbit-tab[aria-selected="true"] {
+      background: var(--paper);
+      color: var(--sage-dark);
+      border-bottom-color: var(--sage);
+    }
+
+    .rabbit-panel {
+      padding: clamp(20px, 5vw, 38px);
+    }
+
+    /* BOOK VIEW */
+
+    .book-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--sage);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .book-page {
+      position: relative;
+      min-height: 370px;
+      background: #faf8f1;
+      border: 1px solid #e7e0d3;
+      margin-top: 20px;
+      padding: clamp(26px, 6vw, 48px);
+      box-shadow: 7px 7px 0 #efede6, 14px 14px 0 #e6e5dc;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .book-page::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 16px;
+      width: 1px;
+      background: #e9dfd0;
+    }
+
+    .book-chapter {
+      color: var(--sage);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .book-page h3 {
+      font-size: clamp(26px, 5vw, 38px);
+      line-height: 1.45;
+      margin: 26px 0 20px;
+    }
+
+    .book-page-description {
+      color: #5d6258;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .book-page-footer {
+      margin-top: auto;
+      padding-top: 35px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .book-tag {
+      border: 1px solid #d8dfd2;
+      color: var(--sage-dark);
+      font-size: 10px;
+      padding: 7px 10px;
+    }
+
+    .book-navigation {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .book-nav-button {
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--dark);
+      padding: 13px 16px;
+      font-size: 12px;
+    }
+
+    .book-nav-button:not(:disabled):hover {
+      border-color: var(--sage);
+      color: var(--sage-dark);
+    }
+
+    .book-connection {
+      margin-top: 25px;
+      padding: 20px;
+      background: var(--sage-light);
+      color: #4d5b48;
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    .book-connection strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    /* CONSTELLATION VIEW */
+
+    .map-intro {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.9;
+      margin: 0 0 22px;
+    }
+
+    .constellation {
+      position: relative;
+      height: 410px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 50%, #e9eee6 0%, transparent 70%),
+        #fafbf7;
+      border: 1px solid var(--border);
+    }
+
+    .constellation svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .constellation line {
+      stroke: #bac7b3;
+      stroke-width: 1.3;
+      stroke-dasharray: 4 5;
+    }
+
+    .map-node {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      border: 1px solid #bdc9b6;
+      border-radius: 50%;
+      background: var(--paper);
+      color: var(--sage-dark);
+      width: 52px;
+      height: 52px;
+      font-size: 12px;
+      font-weight: 700;
+      box-shadow: 0 4px 15px #0000000c;
+      transition: transform .2s, background .2s;
+      z-index: 2;
+    }
+
+    .map-node:hover,
+    .map-node.active {
+      transform: translate(-50%, -50%) scale(1.12);
+      background: var(--sage);
+      color: white;
+    }
+
+    .map-node.center {
+      width: 68px;
+      height: 68px;
+      background: var(--sage-dark);
+      color: white;
+      border-color: var(--sage-dark);
+    }
+
+    .map-node-label {
+      position: absolute;
+      transform: translateX(-50%);
+      width: 115px;
+      color: #626c5e;
+      text-align: center;
+      font-size: 10px;
+      line-height: 1.5;
+      pointer-events: none;
+    }
+
+    .map-detail {
+      margin-top: 16px;
+      padding: 24px;
+      background: #f5f7f1;
+      border: 1px solid var(--border);
+    }
+
+    .map-detail h3 {
+      font-size: 24px;
+      line-height: 1.4;
+      margin: 10px 0 12px;
+    }
+
+    .map-detail p {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    .text-button {
+      border: 0;
+      background: transparent;
+      color: var(--sage-dark);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 10px 0;
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+
+    .rabbit-empty {
+      padding: 20px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .ritual {
+      text-align: center;
+      padding: 75px 15px 25px;
+    }
+
+    .ritual-title {
+      font-family: var(--serif);
+      font-size: 29px;
+    }
+
+    .ritual p {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 2;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
       text-align: center;
       color: var(--muted);
-      font-size: 11px;
+      padding: 30px;
+      font-size: 10px;
       letter-spacing: 1px;
     }
 
@@ -189,8 +684,51 @@
         margin-top: 45px;
       }
 
-      .question-card {
+      .question-card,
+      .deep-dive {
         padding: 26px;
+      }
+
+      .reflection-area {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .rabbit-world-header {
+        padding: 25px;
+      }
+
+      .constellation {
+        height: 350px;
+      }
+
+      .map-node {
+        width: 44px;
+        height: 44px;
+      }
+
+      .map-node.center {
+        width: 58px;
+        height: 58px;
+      }
+
+      .map-node-label {
+        width: 82px;
+        font-size: 9px;
+      }
+
+      .book-page {
+        min-height: 400px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      * {
+        transition: none !important;
       }
     }
   </style>
@@ -209,19 +747,18 @@
   </header>
 
   <main>
-    <p class="eyebrow">THE DAILY COMPANION</p>
 
-    <h1>
-      A question for today.
-    </h1>
+    <div class="page-intro">
+      <p class="eyebrow">THE DAILY COMPANION</p>
+      <h1>A question for today.</h1>
+      <p class="intro">
+        One day. One question. A moment to think a little deeper.
+      </p>
+    </div>
 
-    <p class="intro">
-      One day. One question. A moment to think
-      a little deeper.
-    </p>
+    <!-- DAILY QUESTION -->
 
     <article class="question-card">
-
       <div class="card-top">
         <span>✳ THE UNDERGROUND</span>
         <span id="question-date">LOADING DATE</span>
@@ -235,82 +772,1178 @@
         Finding today's question...
       </h2>
 
-      <p class="context" id="question-context" hidden></p>
-
-      <div class="follow-up" id="follow-up-box" hidden>
-        <strong>GO A LITTLE DEEPER</strong>
-        <span id="question-follow-up"></span>
-      </div>
-
+      <p class="reflection-prompt" id="reflection-prompt">
+        Before you explore further, take a moment to consider your own answer.
+      </p>
     </article>
 
-    <p class="ritual">
-      Scan. Think. Write.
-    </p>
+    <!-- FIRST THOUGHT -->
 
-    <p class="closing">
-      Take this question back to your journal.<br>
-      Your answer belongs on paper.
-    </p>
+    <section class="reflection-area" id="reflection-area">
+      <p class="eyebrow">YOUR FIRST THOUGHT</p>
+      <h3>What do you think?</h3>
+
+      <p>
+        Don't rush to find the right answer.
+        There might not be one.
+        Consider what you believe, and why.
+      </p>
+
+      <button
+        class="explore-button"
+        id="explore-button"
+        type="button"
+        aria-controls="deep-dive"
+        aria-expanded="false"
+        hidden
+      >
+        Explore Beneath the Surface ↓
+      </button>
+    </section>
+
+    <!-- BENEATH THE SURFACE -->
+
+    <section class="deep-dive" id="deep-dive" hidden>
+      <p class="eyebrow">THE UNDERGROUND · EXPLORE FURTHER</p>
+
+      <h2 class="section-heading">
+        Beneath the Surface.
+      </h2>
+
+      <p class="section-description">
+        Every question has a story, an idea, or a contradiction
+        hiding beneath it. Here's where today's question can take you.
+      </p>
+
+      <div class="deep-section" id="origin-section" hidden>
+        <span class="section-number">01 / THE ORIGIN</span>
+        <h3 id="origin-title">Where it began</h3>
+        <span class="origin-type" id="origin-type" hidden></span>
+        <p id="origin-description"></p>
+      </div>
+
+      <div class="deep-section" id="meaning-section" hidden>
+        <span class="section-number">02 / THE DEEPER IDEA</span>
+        <h3 id="meaning-heading">The deeper idea</h3>
+        <p id="meaning-description"></p>
+        <div class="concepts" id="concepts"></div>
+      </div>
+
+      <div class="deep-section" id="resources-section" hidden>
+        <span class="section-number">03 / EXPLORE FURTHER</span>
+        <h3>Keep exploring.</h3>
+        <p>A few carefully chosen places to take your curiosity further.</p>
+        <div class="resources" id="resources"></div>
+      </div>
+
+      <div class="deep-section" id="followup-section" hidden>
+        <span class="section-number">04 / A SECOND THOUGHT</span>
+        <h3>Has your answer changed?</h3>
+        <div class="second-thought">
+          <p id="followup-question"></p>
+        </div>
+      </div>
+
+      <!-- NEW RABBIT HOLE ENTRANCE -->
+
+      <section class="rabbit-entry" id="rabbit-entry" hidden>
+        <span class="rabbit-symbol">✳</span>
+
+        <p class="eyebrow">BEYOND THE QUESTION</p>
+
+        <h3>One thought leads to another.</h3>
+
+        <p>
+          Every idea is connected to something else.
+          A question about love may lead to memory.
+          A question about memory may lead to identity.
+          Where will your curiosity take you?
+        </p>
+
+        <button
+          class="primary-button"
+          id="rabbit-open"
+          type="button"
+          aria-controls="rabbit-world"
+          aria-expanded="false"
+        >
+          Enter The Rabbit Hole ↓
+        </button>
+      </section>
+
+      <!-- NEW RABBIT HOLE EXPERIENCE -->
+
+      <section class="rabbit-world" id="rabbit-world" hidden>
+        <div class="rabbit-world-header">
+          <p class="eyebrow">THE UNDERGROUND / AN EXPLORATION</p>
+          <h2>The Rabbit Hole.</h2>
+          <p>
+            There is no correct path through an idea.
+            Turn the pages or explore the constellation.
+          </p>
+        </div>
+
+        <div class="rabbit-tabs" role="tablist" aria-label="Rabbit Hole views">
+          <button
+            class="rabbit-tab"
+            id="book-tab"
+            type="button"
+            role="tab"
+            aria-controls="book-panel"
+            aria-selected="true"
+            tabindex="0"
+          >
+            I / The Book
+          </button>
+
+          <button
+            class="rabbit-tab"
+            id="map-tab"
+            type="button"
+            role="tab"
+            aria-controls="map-panel"
+            aria-selected="false"
+            tabindex="-1"
+          >
+            II / The Constellation
+          </button>
+        </div>
+
+        <!-- BOOK VIEW -->
+
+        <div
+          class="rabbit-panel"
+          id="book-panel"
+          role="tabpanel"
+          aria-labelledby="book-tab"
+        >
+          <div class="book-meta">
+            <span>FOLLOW THE THREAD</span>
+            <span id="book-progress">01 / 01</span>
+          </div>
+
+          <article class="book-page" aria-live="polite">
+            <span class="book-chapter" id="book-chapter">
+              CHAPTER 01
+            </span>
+
+            <h3 id="book-question">
+              A thought is waiting...
+            </h3>
+
+            <p class="book-page-description" id="book-description"></p>
+
+            <div class="book-page-footer" id="book-concepts"></div>
+          </article>
+
+          <div class="book-navigation">
+            <button class="book-nav-button" id="book-prev" type="button">
+              ← Previous page
+            </button>
+
+            <button class="book-nav-button" id="book-next" type="button">
+              Next page →
+            </button>
+          </div>
+
+          <div class="book-connection" id="book-connection" hidden>
+            <strong>THE CONNECTION</strong>
+            <span id="book-connection-text"></span>
+          </div>
+
+          <button class="text-button" id="book-reset" type="button">
+            Return to the beginning ↺
+          </button>
+        </div>
+
+        <!-- CONSTELLATION VIEW -->
+
+        <div
+          class="rabbit-panel"
+          id="map-panel"
+          role="tabpanel"
+          aria-labelledby="map-tab"
+          hidden
+        >
+          <p class="map-intro">
+            Every point represents a question.
+            Select one to discover its connection to today's idea.
+          </p>
+
+          <div
+            class="constellation"
+            id="constellation"
+            aria-label="Interactive constellation of related questions"
+          >
+            <svg
+              id="constellation-lines"
+              viewBox="0 0 100 100"
+              preserveAspectRatio="none"
+              aria-hidden="true"
+            ></svg>
+          </div>
+
+          <article class="map-detail" id="map-detail" aria-live="polite">
+            <p class="eyebrow" id="map-detail-category">
+              THE STARTING POINT
+            </p>
+
+            <h3 id="map-detail-question">
+              Select an idea.
+            </h3>
+
+            <p id="map-detail-description"></p>
+
+            <button
+              class="text-button"
+              id="map-follow"
+              type="button"
+              hidden
+            >
+              Follow this thought in the book →
+            </button>
+          </article>
+
+          <button class="text-button" id="map-reset" type="button">
+            Return to today's question ↺
+          </button>
+        </div>
+      </section>
+    </section>
+
+    <div class="ritual">
+      <div class="ritual-title">Scan. Think. Write.</div>
+      <p>
+        The question begins here.<br>
+        Your answer belongs on paper.
+      </p>
+    </div>
+
   </main>
 
-  <footer class="footer">
+  <footer>
     THE UNDERGROUND · ONE QUESTION A DAY
   </footer>
 
   <script>
-    const questionElement =
-      document.getElementById("daily-question");
+    "use strict";
 
-    const dateElement =
-      document.getElementById("question-date");
+    // ==========================================
+    // THE UNDERGROUND
+    // DAILY QUESTION + THE RABBIT HOLE
+    // ==========================================
 
-    const categoryElement =
-      document.getElementById("question-category");
+    const $ = id => document.getElementById(id);
 
-    const contextElement =
-      document.getElementById("question-context");
+    let allQuestions = [];
+    let todayQuestion = null;
 
-    const followUpBox =
-      document.getElementById("follow-up-box");
+    let rabbitPath = [];
+    let currentBookIndex = 0;
+    let currentMapQuestion = null;
 
-    const followUpElement =
-      document.getElementById("question-follow-up");
+    // ==========================================
+    // DATE HELPERS
+    // ==========================================
 
-    // Uses the visitor's local calendar date.
     function getLocalDateKey() {
       const now = new Date();
 
       const year = now.getFullYear();
-      const month = String(
-        now.getMonth() + 1
-      ).padStart(2, "0");
-
-      const day = String(
-        now.getDate()
-      ).padStart(2, "0");
+      const month = String(now.getMonth() + 1).padStart(2, "0");
+      const day = String(now.getDate()).padStart(2, "0");
 
       return `${year}-${month}-${day}`;
     }
 
     function formatDate(dateKey) {
-      const [year, month, day] =
-        dateKey.split("-").map(Number);
+      const [year, month, day] = dateKey.split("-").map(Number);
 
-      const date = new Date(year, month - 1, day);
+      return new Date(year, month - 1, day).toLocaleDateString(
+        "en-GB",
+        {
+          day: "numeric",
+          month: "long",
+          year: "numeric"
+        }
+      );
+    }
 
-      return date.toLocaleDateString("en-GB", {
-        day: "numeric",
-        month: "long",
-        year: "numeric"
+    function isText(value) {
+      return typeof value === "string" && value.trim().length > 0;
+    }
+
+    function setText(id, value) {
+      $(id).textContent = value || "";
+    }
+
+    function show(id) {
+      $(id).hidden = false;
+    }
+
+    function getQuestionDate(question) {
+      return question.publishDate || question.date;
+    }
+
+    function getQuestionText(question) {
+      return question.text || question.question || "";
+    }
+
+    function getConcepts(question) {
+      return Array.isArray(question.deepDive?.relatedConcepts)
+        ? question.deepDive.relatedConcepts.filter(isText)
+        : [];
+    }
+
+    function getExplanation(question) {
+      return (
+        question.deepDive?.explanation ||
+        question.context ||
+        ""
+      );
+    }
+
+    function getHeading(question) {
+      return (
+        question.deepDive?.heading ||
+        question.category ||
+        "A deeper idea"
+      );
+    }
+
+    // ==========================================
+    // EXISTING FEATURE: THE ORIGIN
+    // ==========================================
+
+    function renderOrigin(question) {
+      const origin = question.origin;
+      const source = question.source;
+
+      let title = "";
+      let type = "";
+      let description = "";
+
+      if (origin && typeof origin === "object") {
+        title = origin.title || "";
+        type = origin.type || "";
+
+        description = [
+          origin.creator,
+          origin.description
+        ].filter(isText).join("\n\n");
+      } else if (isText(origin)) {
+        title = origin;
+      } else if (isText(source)) {
+        title = source;
+      } else if (source && typeof source === "object") {
+        title = source.title || source.name || "";
+        type = source.type || "";
+        description = source.description || "";
+      }
+
+      if (!title && !description) return;
+
+      setText("origin-title", title || "The origin");
+      setText("origin-type", type);
+      setText("origin-description", description);
+
+      $("origin-type").hidden = !type;
+
+      show("origin-section");
+    }
+
+    // ==========================================
+    // EXISTING FEATURE: DEEPER IDEA
+    // ==========================================
+
+    function renderMeaning(question) {
+      const heading = getHeading(question);
+      const explanation = getExplanation(question);
+      const concepts = getConcepts(question);
+
+      if (!explanation && concepts.length === 0) return;
+
+      setText("meaning-heading", heading);
+      setText("meaning-description", explanation);
+
+      const container = $("concepts");
+      container.replaceChildren();
+
+      concepts.forEach(concept => {
+        const tag = document.createElement("span");
+        tag.className = "concept";
+        tag.textContent = concept;
+        container.appendChild(tag);
+      });
+
+      show("meaning-section");
+    }
+
+    // ==========================================
+    // EXISTING FEATURE: RECOMMENDED READING
+    // ==========================================
+
+    function renderResources(question) {
+      const resources = Array.isArray(question.resources)
+        ? question.resources
+        : [];
+
+      const container = $("resources");
+      container.replaceChildren();
+
+      resources.forEach(resource => {
+        if (!resource || !isText(resource.title)) return;
+
+        const card = document.createElement("div");
+        card.className = "resource";
+
+        const type = document.createElement("span");
+        type.className = "resource-type";
+        type.textContent = resource.type || "Resource";
+
+        const title = document.createElement("span");
+        title.className = "resource-title";
+        title.textContent = resource.title;
+
+        card.append(type, title);
+
+        if (isText(resource.author)) {
+          const author = document.createElement("div");
+          author.className = "resource-author";
+          author.textContent = resource.author;
+          card.appendChild(author);
+        }
+
+        if (isText(resource.whyRead)) {
+          const description = document.createElement("div");
+          description.className = "resource-description";
+          description.textContent = resource.whyRead;
+          card.appendChild(description);
+        }
+
+        if (isText(resource.url)) {
+          try {
+            const url = new URL(resource.url);
+
+            if (
+              url.protocol === "https:" ||
+              url.protocol === "http:"
+            ) {
+              const link = document.createElement("a");
+              link.className = "resource";
+              link.href = url.href;
+              link.target = "_blank";
+              link.rel = "noopener noreferrer";
+
+              while (card.firstChild) {
+                link.appendChild(card.firstChild);
+              }
+
+              const arrow = document.createElement("div");
+              arrow.className = "resource-arrow";
+              arrow.textContent = "Explore resource ↗";
+
+              link.appendChild(arrow);
+              container.appendChild(link);
+              return;
+            }
+          } catch (error) {
+            console.warn("Invalid resource URL:", resource.url);
+          }
+        }
+
+        container.appendChild(card);
+      });
+
+      if (container.children.length) {
+        show("resources-section");
+      }
+    }
+
+    // ==========================================
+    // EXISTING FEATURE: SECOND THOUGHT
+    // ==========================================
+
+    function renderFollowUp(question) {
+      if (!isText(question.followUp)) return;
+
+      setText("followup-question", question.followUp);
+      show("followup-section");
+    }
+
+    // ==========================================
+    // RABBIT HOLE: CONNECTION ENGINE
+    // ==========================================
+
+    /*
+      These groups are editorial themes.
+
+      They do not change questions.json.
+      They simply help identify related ideas.
+
+      A question can belong to multiple themes.
+    */
+
+    const THEME_GROUPS = {
+      identity: [
+        "identity", "self", "person", "mind",
+        "memory", "free will", "consciousness"
+      ],
+
+      morality: [
+        "morality", "ethics", "justice", "loyalty",
+        "responsibility", "duty", "harm", "intention"
+      ],
+
+      society: [
+        "society", "truth", "propaganda", "surveillance",
+        "freedom", "conformity", "speech", "tolerance"
+      ],
+
+      emotion: [
+        "love", "loneliness", "happiness", "suffering",
+        "friendship", "admiration", "idealisation"
+      ],
+
+      knowledge: [
+        "knowledge", "belief", "bias", "evidence",
+        "memory", "truth", "uncertainty", "psychology"
+      ],
+
+      existence: [
+        "existence", "consciousness", "universe",
+        "meaning", "experience", "reality", "life"
+      ]
+    };
+
+    /*
+      A few intentionally curated links between
+      existing question IDs.
+
+      These links make the journey more literary
+      than a purely automatic keyword search.
+
+      All other questions can still connect
+      through their categories and concepts.
+    */
+
+    const EDITORIAL_LINKS = [
+      [1, 7],
+      [1, 25],
+      [1, 24],
+      [7, 25],
+      [3, 12],
+      [3, 19],
+      [4, 11],
+      [5, 14],
+      [5, 21],
+      [6, 18],
+      [8, 17],
+      [8, 27],
+      [9, 20],
+      [10, 16],
+      [11, 23],
+      [12, 20],
+      [13, 14],
+      [14, 21],
+      [15, 26],
+      [16, 27],
+      [17, 28],
+      [19, 25],
+      [21, 23],
+      [22, 30],
+      [24, 29],
+      [27, 30],
+      [28, 30]
+    ];
+
+    function getSearchText(question) {
+      return [
+        question.category,
+        question.source,
+        question.origin?.title,
+        question.origin?.type,
+        question.deepDive?.heading,
+        ...getConcepts(question)
+      ]
+        .filter(isText)
+        .join(" ")
+        .toLowerCase();
+    }
+
+    function getQuestionThemes(question) {
+      const text = getSearchText(question);
+      const themes = [];
+
+      for (const [theme, keywords] of Object.entries(THEME_GROUPS)) {
+        if (keywords.some(keyword => text.includes(keyword))) {
+          themes.push(theme);
+        }
+      }
+
+      return themes;
+    }
+
+    function connectionScore(first, second) {
+      if (first.id === second.id) return -1;
+
+      let score = 0;
+
+      const firstConcepts = getConcepts(first).map(
+        concept => concept.toLowerCase()
+      );
+
+      const secondConcepts = getConcepts(second).map(
+        concept => concept.toLowerCase()
+      );
+
+      const sharedConcepts = firstConcepts.filter(
+        concept => secondConcepts.includes(concept)
+      );
+
+      score += sharedConcepts.length * 5;
+
+      const firstThemes = getQuestionThemes(first);
+      const secondThemes = getQuestionThemes(second);
+
+      const sharedThemes = firstThemes.filter(
+        theme => secondThemes.includes(theme)
+      );
+
+      score += sharedThemes.length * 2;
+
+      if (
+        first.category &&
+        second.category &&
+        first.category.toLowerCase() === second.category.toLowerCase()
+      ) {
+        score += 3;
+      }
+
+      const isEditorialLink = EDITORIAL_LINKS.some(
+        ([a, b]) =>
+          (a === first.id && b === second.id) ||
+          (b === first.id && a === second.id)
+      );
+
+      if (isEditorialLink) {
+        score += 12;
+      }
+
+      return score;
+    }
+
+    function getPublishedQuestions() {
+      const today = getLocalDateKey();
+
+      return allQuestions.filter(question => {
+        const date = getQuestionDate(question);
+
+        return (
+          isText(date) &&
+          date <= today &&
+          isText(getQuestionText(question))
+        );
       });
     }
+
+    function getRelatedQuestions(question, limit = 5, excluded = []) {
+      const excludedIds = new Set([
+        question.id,
+        ...excluded
+      ]);
+
+      return getPublishedQuestions()
+        .filter(candidate => !excludedIds.has(candidate.id))
+        .map(candidate => ({
+          question: candidate,
+          score: connectionScore(question, candidate)
+        }))
+        .filter(item => item.score > 0)
+        .sort((a, b) =>
+          b.score - a.score ||
+          String(getQuestionDate(b.question)).localeCompare(
+            String(getQuestionDate(a.question))
+          )
+        )
+        .slice(0, limit)
+        .map(item => item.question);
+    }
+
+    function describeConnection(first, second) {
+      if (!first || !second) return "";
+
+      const firstConcepts = getConcepts(first);
+      const secondConcepts = getConcepts(second);
+
+      const sharedConcept = firstConcepts.find(concept =>
+        secondConcepts.some(
+          other => other.toLowerCase() === concept.toLowerCase()
+        )
+      );
+
+      if (sharedConcept) {
+        return (
+          `These questions meet at the idea of ${sharedConcept.toLowerCase()}. ` +
+          "Consider whether your answer to one changes how you approach the other."
+        );
+      }
+
+      const sharedTheme = getQuestionThemes(first).find(
+        theme => getQuestionThemes(second).includes(theme)
+      );
+
+      if (sharedTheme) {
+        return (
+          `Both questions explore ${sharedTheme}. ` +
+          "They approach the subject from different directions. " +
+          "What changes when you consider them together?"
+        );
+      }
+
+      return (
+        "These questions are connected by a broader philosophical tension. " +
+        "Try finding the assumption that both questions ask you to examine."
+      );
+    }
+
+    // ==========================================
+    // RABBIT HOLE: BUILD THE BOOK PATH
+    // ==========================================
+
+    function buildBookPath(startQuestion) {
+      const path = [startQuestion];
+      const visited = new Set([startQuestion.id]);
+
+      let current = startQuestion;
+
+      // The journey includes up to six chapters.
+      for (let i = 0; i < 5; i++) {
+        const related = getRelatedQuestions(
+          current,
+          5,
+          [...visited]
+        );
+
+        if (!related.length) break;
+
+        /*
+          Prefer an interesting connection,
+          but allow the thread to branch
+          instead of always choosing the
+          highest-scoring match.
+        */
+
+        const next = related[
+          Math.min(i % 2, related.length - 1)
+        ];
+
+        path.push(next);
+        visited.add(next.id);
+        current = next;
+      }
+
+      return path;
+    }
+
+    function renderBookPage() {
+      const question = rabbitPath[currentBookIndex];
+
+      if (!question) return;
+
+      const pageNumber = currentBookIndex + 1;
+
+      setText(
+        "book-progress",
+        `${String(pageNumber).padStart(2, "0")} / ` +
+        `${String(rabbitPath.length).padStart(2, "0")}`
+      );
+
+      setText(
+        "book-chapter",
+        `CHAPTER ${String(pageNumber).padStart(2, "0")} · ` +
+        (question.category || "REFLECTION").toUpperCase()
+      );
+
+      setText("book-question", getQuestionText(question));
+
+      setText(
+        "book-description",
+        getExplanation(question) ||
+        "Consider this question from a different perspective."
+      );
+
+      const conceptContainer = $("book-concepts");
+      conceptContainer.replaceChildren();
+
+      getConcepts(question).slice(0, 4).forEach(concept => {
+        const tag = document.createElement("span");
+        tag.className = "book-tag";
+        tag.textContent = concept;
+        conceptContainer.appendChild(tag);
+      });
+
+      $("book-prev").disabled = currentBookIndex === 0;
+
+      $("book-next").disabled =
+        currentBookIndex >= rabbitPath.length - 1;
+
+      $("book-next").textContent =
+        currentBookIndex === rabbitPath.length - 2
+          ? "Final page →"
+          : "Next page →";
+
+      const previous = rabbitPath[currentBookIndex - 1];
+
+      $("book-connection").hidden = !previous;
+
+      if (previous) {
+        setText(
+          "book-connection-text",
+          describeConnection(previous, question)
+        );
+      }
+    }
+
+    function openBookAt(question) {
+      const existingIndex = rabbitPath.findIndex(
+        item => item.id === question.id
+      );
+
+      if (existingIndex !== -1) {
+        currentBookIndex = existingIndex;
+      } else {
+        rabbitPath = buildBookPath(question);
+        currentBookIndex = 0;
+      }
+
+      switchRabbitTab("book");
+      renderBookPage();
+    }
+
+    // ==========================================
+    // RABBIT HOLE: CONSTELLATION
+    // ==========================================
+
+    function createSvgLine(x1, y1, x2, y2) {
+      const line = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "line"
+      );
+
+      line.setAttribute("x1", x1);
+      line.setAttribute("y1", y1);
+      line.setAttribute("x2", x2);
+      line.setAttribute("y2", y2);
+
+      return line;
+    }
+
+    function renderMapDetail(question, centre) {
+      currentMapQuestion = question;
+
+      setText(
+        "map-detail-category",
+        centre
+          ? "THE STARTING POINT"
+          : (question.category || "CONNECTED IDEA").toUpperCase()
+      );
+
+      setText(
+        "map-detail-question",
+        getQuestionText(question)
+      );
+
+      setText(
+        "map-detail-description",
+        centre
+          ? getExplanation(question)
+          : describeConnection(centre, question) +
+            "\n\n" +
+            getExplanation(question)
+      );
+
+      $("map-follow").hidden = false;
+    }
+
+    function renderConstellation(centreQuestion) {
+      const container = $("constellation");
+      const svg = $("constellation-lines");
+
+      container.querySelectorAll(
+        ".map-node, .map-node-label"
+      ).forEach(element => element.remove());
+
+      svg.replaceChildren();
+
+      const related = getRelatedQuestions(centreQuestion, 5);
+
+      /*
+        Positions are percentages so the map
+        remains responsive without a library.
+      */
+
+      const positions = [
+        { x: 20, y: 20 },
+        { x: 78, y: 18 },
+        { x: 86, y: 68 },
+        { x: 50, y: 83 },
+        { x: 14, y: 68 }
+      ];
+
+      function addNode(question, x, y, centre = false) {
+        const node = document.createElement("button");
+
+        node.type = "button";
+        node.className = "map-node" + (centre ? " center" : "");
+        node.textContent = centre ? "✳" : String(question.id);
+
+        node.style.left = `${x}%`;
+        node.style.top = `${y}%`;
+
+        node.setAttribute(
+          "aria-label",
+          `${centre ? "Current question" : "Connected question"}: ` +
+          getQuestionText(question)
+        );
+
+        node.title = getQuestionText(question);
+
+        node.addEventListener("click", () => {
+          container.querySelectorAll(".map-node").forEach(
+            item => item.classList.remove("active")
+          );
+
+          node.classList.add("active");
+
+          renderMapDetail(question, centreQuestion);
+
+          if (centre) {
+            renderMapDetail(centreQuestion, centreQuestion);
+          }
+        });
+
+        container.appendChild(node);
+
+        if (!centre) {
+          const label = document.createElement("span");
+          label.className = "map-node-label";
+
+          label.textContent = question.category || "Idea";
+
+          label.style.left = `${x}%`;
+          label.style.top = `${Math.min(y + 10, 94)}%`;
+
+          container.appendChild(label);
+        }
+
+        return node;
+      }
+
+      related.forEach((question, index) => {
+        const position = positions[index];
+
+        svg.appendChild(
+          createSvgLine(
+            50,
+            48,
+            position.x,
+            position.y
+          )
+        );
+      });
+
+      related.forEach((question, index) => {
+        const position = positions[index];
+
+        addNode(
+          question,
+          position.x,
+          position.y
+        );
+      });
+
+      const centreNode = addNode(
+        centreQuestion,
+        50,
+        48,
+        true
+      );
+
+      centreNode.classList.add("active");
+
+      renderMapDetail(centreQuestion, centreQuestion);
+
+      if (!related.length) {
+        const message = document.createElement("p");
+        message.className = "rabbit-empty";
+        message.textContent =
+          "More connections will appear as new questions are published.";
+        message.style.position = "absolute";
+        message.style.bottom = "0";
+        message.style.left = "0";
+        message.style.right = "0";
+        message.style.textAlign = "center";
+        container.appendChild(message);
+      }
+    }
+
+    // ==========================================
+    // RABBIT HOLE: SWITCH VIEWS
+    // ==========================================
+
+    function switchRabbitTab(view) {
+      const bookSelected = view === "book";
+
+      $("book-panel").hidden = !bookSelected;
+      $("map-panel").hidden = bookSelected;
+
+      $("book-tab").setAttribute(
+        "aria-selected",
+        String(bookSelected)
+      );
+
+      $("map-tab").setAttribute(
+        "aria-selected",
+        String(!bookSelected)
+      );
+
+      $("book-tab").tabIndex = bookSelected ? 0 : -1;
+      $("map-tab").tabIndex = bookSelected ? -1 : 0;
+    }
+
+    $("book-tab").addEventListener("click", () => {
+      switchRabbitTab("book");
+    });
+
+    $("map-tab").addEventListener("click", () => {
+      switchRabbitTab("map");
+    });
+
+    [$("book-tab"), $("map-tab")].forEach((tab, index, tabs) => {
+      tab.addEventListener("keydown", event => {
+        if (
+          event.key !== "ArrowLeft" &&
+          event.key !== "ArrowRight"
+        ) return;
+
+        event.preventDefault();
+
+        const nextIndex =
+          event.key === "ArrowRight"
+            ? (index + 1) % tabs.length
+            : (index - 1 + tabs.length) % tabs.length;
+
+        tabs[nextIndex].click();
+        tabs[nextIndex].focus();
+      });
+    });
+
+    // ==========================================
+    // RABBIT HOLE: BUTTONS
+    // ==========================================
+
+    $("rabbit-open").addEventListener("click", () => {
+      const opening = $("rabbit-world").hidden;
+
+      $("rabbit-world").hidden = !opening;
+
+      $("rabbit-open").setAttribute(
+        "aria-expanded",
+        String(opening)
+      );
+
+      $("rabbit-open").textContent = opening
+        ? "Close The Rabbit Hole ↑"
+        : "Enter The Rabbit Hole ↓";
+
+      if (opening) {
+        rabbitPath = buildBookPath(todayQuestion);
+        currentBookIndex = 0;
+
+        renderBookPage();
+        renderConstellation(todayQuestion);
+        switchRabbitTab("book");
+
+        $("rabbit-world").scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    });
+
+    $("book-prev").addEventListener("click", () => {
+      if (currentBookIndex > 0) {
+        currentBookIndex--;
+        renderBookPage();
+      }
+    });
+
+    $("book-next").addEventListener("click", () => {
+      if (currentBookIndex < rabbitPath.length - 1) {
+        currentBookIndex++;
+        renderBookPage();
+      }
+    });
+
+    $("book-reset").addEventListener("click", () => {
+      rabbitPath = buildBookPath(todayQuestion);
+      currentBookIndex = 0;
+      renderBookPage();
+    });
+
+    $("map-follow").addEventListener("click", () => {
+      if (!currentMapQuestion) return;
+
+      openBookAt(currentMapQuestion);
+
+      $("rabbit-world").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    });
+
+    $("map-reset").addEventListener("click", () => {
+      renderConstellation(todayQuestion);
+    });
+
+    // ==========================================
+    // EXISTING FEATURE: BENEATH THE SURFACE
+    // ==========================================
+
+    $("explore-button").addEventListener("click", () => {
+      const opening = $("deep-dive").hidden;
+
+      $("deep-dive").hidden = !opening;
+
+      $("explore-button").setAttribute(
+        "aria-expanded",
+        String(opening)
+      );
+
+      $("explore-button").textContent = opening
+        ? "Hide Beneath the Surface ↑"
+        : "Explore Beneath the Surface ↓";
+
+      if (opening) {
+        $("deep-dive").scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    });
+
+    // ==========================================
+    // LOAD TODAY'S QUESTION
+    // ==========================================
 
     async function loadDailyQuestion() {
       const today = getLocalDateKey();
 
-      dateElement.textContent =
-        formatDate(today).toUpperCase();
+      setText(
+        "question-date",
+        formatDate(today).toUpperCase()
+      );
 
       try {
         const response = await fetch(
@@ -319,60 +1952,87 @@
         );
 
         if (!response.ok) {
-          throw new Error("Questions could not be loaded.");
+          throw new Error("Could not load questions.json");
         }
 
-        const questions = await response.json();
+        const data = await response.json();
 
-        if (!Array.isArray(questions)) {
-          throw new Error("Invalid question data.");
+        if (!Array.isArray(data)) {
+          throw new Error(
+            "questions.json must contain an array."
+          );
         }
 
-        // Each question has a scheduled publishDate.
-        const todaysQuestion = questions.find(
-          item => item.publishDate === today
+        allQuestions = data;
+
+        todayQuestion = allQuestions.find(
+          question => getQuestionDate(question) === today
         );
 
-        if (!todaysQuestion) {
-          questionElement.textContent =
-            "No question has been scheduled for today yet.";
+        if (!todayQuestion) {
+          setText(
+            "daily-question",
+            "No question has been scheduled for today yet."
+          );
 
-          categoryElement.textContent =
-            "COMING SOON";
+          setText("question-category", "COMING SOON");
 
+          $("reflection-area").hidden = true;
           return;
         }
 
-        questionElement.textContent =
-          todaysQuestion.text;
+        const questionText = getQuestionText(todayQuestion);
 
-        categoryElement.textContent =
-          todaysQuestion.category || "REFLECTION";
-
-        if (todaysQuestion.context) {
-          contextElement.textContent =
-            todaysQuestion.context;
-
-          contextElement.hidden = false;
+        if (!isText(questionText)) {
+          throw new Error("Today's question has no text.");
         }
 
-        if (todaysQuestion.followUp) {
-          followUpElement.textContent =
-            todaysQuestion.followUp;
+        setText("daily-question", questionText);
 
-          followUpBox.hidden = false;
-        }
+        setText(
+          "question-category",
+          todayQuestion.category || "REFLECTION"
+        );
+
+        renderOrigin(todayQuestion);
+        renderMeaning(todayQuestion);
+        renderResources(todayQuestion);
+        renderFollowUp(todayQuestion);
+
+        const hasExtraContent = [
+          "origin-section",
+          "meaning-section",
+          "resources-section",
+          "followup-section"
+        ].some(id => !$(id).hidden);
+
+        $("explore-button").hidden = !hasExtraContent;
+
+        /*
+          The Rabbit Hole is only available
+          when today's question exists and
+          at least one related published
+          question is available.
+        */
+
+        const related = getRelatedQuestions(todayQuestion, 5);
+
+        $("rabbit-entry").hidden =
+          !hasExtraContent || related.length === 0;
 
       } catch (error) {
         console.error(error);
 
-        questionElement.textContent =
-          "We couldn't load today's question. Please try again.";
+        setText(
+          "daily-question",
+          "We couldn't load today's question. Please try again."
+        );
 
-        questionElement.classList.add("error");
+        $("daily-question").classList.add("error");
 
-        categoryElement.textContent =
-          "UNAVAILABLE";
+        setText("question-category", "UNAVAILABLE");
+
+        $("reflection-area").hidden = true;
       }
     }
 
